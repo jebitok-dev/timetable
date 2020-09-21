@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/header/header.components';
 import Class from './components/classes/class.component';
+import Days from './components/days/day.component'
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <h2>School Timetable</h2>
       </div>
       <Class />
+      <Days />
     </div>
   );
 }
