@@ -1,14 +1,16 @@
 import React from 'react';
 import Header from './components/header/header.components';
+import Class from './components/classes/class.component';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <header className="App-header">
+      <div className="App-header">
         <h2>School Timetable</h2>
-      </header>
+      </div>
+      <Class />
     </div>
   );
 }
