@@ -6,7 +6,7 @@ class Class extends Component {
         super(props);
 
         this.state = {
-            classes: [
+            time: [
                 { id: 1, time: '8', subject: 'Math' , teacher: 'Mrs Grace' },
                 { id: 2, time: '8.30', subject: 'Math' , teacher: 'Mrs Grace' },
                 { id: 3, time: '9', subject: 'P.E' , teacher: 'Mrs Grace' },
