@@ -38,11 +38,16 @@
     "babel-loader": "^8.1.0",
     "babel-preset": "^1.1.6",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^4.3.0",
+    "moment": "^2.29.0",
     "react": "^16.13.1",
+    "react-big-calendar": "^0.28.0",
     "react-dom": "^16.13.1",
+    "style-loader": "^1.2.1",
     "webpack": "^4.44.2"
-  }, 
-  "babel": 
-    ["react", "es2015"]
-  
+  },
+  "babel": [
+    "react",
+    "es2015"
+  ]
 }
