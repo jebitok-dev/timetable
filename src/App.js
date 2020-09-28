@@ -9,7 +9,7 @@ BigCalendar.momentLocalizer(moment)
 import './App.css';
 import { getEvents } from './gcal';
 
-require('style-loader!css-loader!react-big-calendar/lib/css/react-big-calendar.css')
+// require('style-loader!css-loader!react-big-calendar/lib/css/react-big-calendar.css');
 
 class App extends Component {
   constructor () {
