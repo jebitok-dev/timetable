@@ -44,6 +44,7 @@
     "react-big-calendar": "^0.28.0",
     "react-dom": "^16.13.1",
     "style-loader": "^1.2.1",
+    "superagent": "^6.1.0",
     "webpack": "^4.44.2"
   },
   "babel": [

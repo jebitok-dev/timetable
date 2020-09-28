@@ -1,37 +1,25 @@
-// import React, { Component } from 'react';
-// import './day.styles.scss';
-// import '../classes/class.component';
+import request from 'superagent'
 
-// class Days extends Component {
-//     renderDays() {
-//         return 
-//             this.state.time.map((time, index) => {
-//                 const { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday } = time
-//                 return (
-//                     <tr tr={Monday} >
-//                         <td>{Monday}</td>
-//                         <td>{Tuesday}</td>
-//                         <td>{Wednesday}</td>
-//                         <td>{Thursday}</td>
-//                         <td>{Friday}</td>
-//                         <td>{Saturday}</td>
-//                     </tr>
-//                 )
-//             })
-//     }
+const CALENDAR_ID = 'N2tnbDIxZjgwOG8zOHY4aXFlbmU2M2Rrb3Agc2hhcm9ua29zZ2VpNEBt'
+const API_KEY = 'AIzaSyAQLCPfxxLyuUp13nFmFS-8-aRARkhUtmE'
+let url = `https://www.googleapis.com/calendar/v3/calendars/${N2tnbDIxZjgwOG8zOHY4aXFlbmU2M2Rrb3Agc2hhcm9ua29zZ2VpNEBt}/events?key=${AIzaSyAQLCPfxxLyuUp13nFmFS-8-aRARkhUtmE}`
 
-//     render() {
-//         return(
-//             <div>
-//                 {/* <h1 id="title">Class Timetable</h1> */}
-//                 <table id='students'>
-//                     <tbody>
-//                         {this.renderDays()}
-//                     </tbody>
-//                 </table>
-//             </div>
-//         )
-//     }
-// }
+export function getEvents (callback) {
+  request
+    .get(url)
+    .end((err, resp) => {
+      if (!err) {
+        const events = []
+        JSON.parse(resp.text).items.map((event) => {
+          events.push({
+            start: event.start.date || event.start.dateTime,
+            end: event.end.date || event.end.dateTime,
+            title: event.summary,
+          })
+        })
+        callback(events)
+      }
+    })
+}
 
-// export default Days;
+// /eventedit/
